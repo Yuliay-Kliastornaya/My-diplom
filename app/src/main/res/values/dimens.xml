@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="my_padding">4dp</dimen>
+    <dimen name="my_margin_hor">32dp</dimen>
+    <dimen name="my_margin_hor_large">120dp</dimen>
+    <dimen name="my_margin_ver">84dp</dimen>
+    <dimen name="my_margin_top_text">16dp</dimen>
+    <dimen name="size_btn_text_large">24sp</dimen>
+    <dimen name="size_disclaimer_text_large">20sp</dimen>
+
+    <dimen name="menu_bottom_height">70dp</dimen>
+    <dimen name="menu_bottom_height_large">100dp</dimen>
+    <dimen name="menu_top_height">100dp</dimen>
+    <dimen name="menu_top_height_large">400dp</dimen>
+    <dimen name="imageView_height">1</dimen>
+    <dimen name="radius_corner">15dp</dimen>
+
+</resources>
