@@ -4,33 +4,47 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.widget.Toolbar
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        initMenuButtons()
+        initNavigation()
     }
-    private fun initMenuButtons() {
-        var buttonMenu=findViewById<Button>(R.id.button_menu)
-        buttonMenu.setOnClickListener {
-            Toast.makeText(this, "Меню", Toast.LENGTH_SHORT).show()
-        }
-        var buttonFavorites=findViewById<Button>(R.id.button_favorites)
-        buttonFavorites.setOnClickListener {
-            Toast.makeText(this, "ИЗБРАННОЕ", Toast.LENGTH_SHORT).show()
-        }
-        var buttonViewLater=findViewById<Button>(R.id.button_view_later)
-        buttonViewLater.setOnClickListener {
-            Toast.makeText(this, "ПОСМОТРЕТЬ ПОЗЖЕ", Toast.LENGTH_SHORT).show()
-        }
-        var buttonSelections=findViewById<Button>(R.id.button_selections)
-        buttonSelections.setOnClickListener {
-            Toast.makeText(this, "ПОДБОРКИ", Toast.LENGTH_SHORT).show()
-        }
-        var buttonSetting=findViewById<Button>(R.id.button_settings)
-        buttonSetting.setOnClickListener {
-            Toast.makeText(this, "НАСТРОЙКИ", Toast.LENGTH_SHORT).show()
-        }
-    }
+  private fun initNavigation() {
+      var topAppBar=findViewById<Toolbar>(R.id.topAppBar)
+      topAppBar.setOnMenuItemClickListener {
+          when (it.itemId) {
+              R.id.settings -> {
+                  Toast.makeText(this, "Настройки", Toast.LENGTH_SHORT).show()
+                  true
+              }
+              else -> false
+          }
+      }
+
+      var bottom_navigation=findViewById<BottomNavigationView>(R.id.bottom_navigation)
+      bottom_navigation.setOnItemSelectedListener{
+
+          when (it.itemId) {
+              R.id.favorites -> {
+                  Toast.makeText(this, "Избранное", Toast.LENGTH_SHORT).show()
+                  true
+              }
+              R.id.watch_later -> {
+                  Toast.makeText(this, "Посмотреть похже", Toast.LENGTH_SHORT).show()
+                  true
+              }
+              R.id.selections -> {
+                  Toast.makeText(this, "Подборки", Toast.LENGTH_SHORT).show()
+                  true
+              }
+              else -> false
+          }
+      }
+
+  }
 }

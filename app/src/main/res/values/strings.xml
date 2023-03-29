@@ -6,10 +6,7 @@
     <string name="btn_view_later">ПОСМОТРЕТЬ ПОЗЖЕ</string>
     <string name="btn_selections">ПОДБОРКИ</string>
     <string name="btn_settings">НАСТРОЙКИ</string>
-
-
-
-
+    <string name="page_title">Search it!</string>
 
 
 </resources>
