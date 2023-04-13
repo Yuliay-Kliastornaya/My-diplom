@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">My diplom</string>
+    <string name="disclaimer">постеры предоставлены https://www.movieposters.com/</string>
+    <string name="btn_menu">МЕНЮ</string>
+    <string name="btn_favorites">ИЗБРАННОЕ</string>
+    <string name="btn_view_later">ПОСМОТРЕТЬ ПОЗЖЕ</string>
+    <string name="btn_selections">ПОДБОРКИ</string>
+    <string name="btn_settings">НАСТРОЙКИ</string>
+    <string name="page_title">Search it!</string>
+
+
 </resources>
